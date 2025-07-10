@@ -1,7 +1,13 @@
 import fs from "fs/promises"
+import { serialize } from "v8";
 
 const fileHandler = await fs.open("./testing.txt" , "r")
+const buff = Buffer.alloc(24);
 
 //* Asynchronous execution of code.
-const data = await fileHandler.readFile("utf-8");
-console.log(data);
+const chunkData = await fileHandler.read(buff);
+//* Automatically closes the file
+const wholeData = await fileHandler.readFile();
+
+console.log(chunkData);
+console.log(wholeData);
