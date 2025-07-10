@@ -1,5 +1,4 @@
 import fs from "fs/promises"
-import { serialize } from "v8";
 
 const fileHandler = await fs.open("./testing.txt" , "r")
 const buff = Buffer.alloc(24);
