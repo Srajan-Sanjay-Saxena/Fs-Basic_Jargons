@@ -1,4 +1,5 @@
 import fs from "fs/promises"
+import { Buffer } from "buffer";
 
 const fileHandler = await fs.open("./testing.txt" , "r")
 const buff = Buffer.alloc(24);

@@ -1,4 +1,5 @@
 import fs from "fs";
+import { Buffer } from "buffer";
 
 //* Synchronously opening the file in read mode.
 const fileDescriptor = fs.openSync("./testing.txt", "r");
@@ -24,3 +25,10 @@ fs.read(fileDescriptor, buff, (err, byteRead , buff) => {
   console.log("No error ....");
   console.log(buff.toString("utf-8" , 0 , byteRead));
 });
+
+fs.close(fileDescriptor , (err) => {
+  if(err){
+    console.log(err);
+  }
+  console.log("File closed");
+})

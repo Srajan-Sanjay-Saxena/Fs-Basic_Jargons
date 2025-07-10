@@ -1,4 +1,5 @@
 import fs from "fs";
+import { Buffer } from "buffer";
 
 fs.open("./testing.txt", "r", (err, fd: number) => {
   const buff = Buffer.alloc(24);
