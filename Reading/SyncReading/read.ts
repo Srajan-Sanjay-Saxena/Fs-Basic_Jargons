@@ -8,7 +8,6 @@ const buff = Buffer.alloc(24);
  * Description : The read function provides more granular control than readFile function , because here we can specify multiple params , one of the param is that we can define maximum amount of chunk size using buffer , and that same buffer we can get in the call back to get the data.
  * @param {any} fileDescriptor : descriptor number of the file
  * @param {any} buff : 
- * @param {any} (err
  * @param {any} byteRead : number of bytes read , can be controlled using buff param outside callback
  * @returns {void} 
  */
